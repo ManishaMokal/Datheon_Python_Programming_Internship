@@ -1,45 +1,56 @@
-# Hangman Word Guessing Game
+# Datheon Python Programming Internship
 
-## Project Overview
-This project is a console-based Hangman Word Guessing Game developed using Python as part of the Datheon Python Programming Internship.
+This repository contains Python projects completed as part of the Datheon Python Programming Internship.
 
-The player tries to guess a randomly selected English word, one letter at a time, with a maximum of six incorrect attempts.
+## Task 1: Hangman Game
 
-## Features
-- Random word selection from a provided English word list.
-- Displays hidden letters using underscores.
-- Reveals correctly guessed letters.
-- Allows up to six incorrect guesses.
-- Displays ASCII hangman drawings.
-- Prevents repeated guesses from reducing attempts.
-- Validates user input.
-- Displays victory and defeat messages.
+A word-guessing game where the player guesses letters to find a hidden word within a limited number of attempts.
 
-## Technologies Used
+**Features**
+- Random word selection
+- Letter-by-letter guessing
+- Tracks incorrect guesses
+- Displays the game result
+
+**Run the program**
+```bash
+python hangman.py
+```
+
+## Task 2: Stock Portfolio Performance Tracker
+
+A Python program that tracks stock investments and calculates portfolio performance using the latest available stock closing prices from Yahoo Finance.
+
+**Features**
+- Validates stock symbols using `constituents.csv`
+- Accepts purchase prices and share quantities
+- Fetches the latest available stock closing prices using `yfinance`
+- Calculates investment value, market value, gain/loss, and return percentage
+- Saves portfolio results to `portfolio_summary.csv`
+
+**Requirements**
 - Python 3
-- Python Standard Library (`random`)
-- Text file handling
-- Git and GitHub
+- Internet connection
+- `yfinance` library
+
+**Install the required library**
+```bash
+python -m pip install yfinance
+```
+
+**Run the program**
+
+python portfolio.py
+
+
+Enter a valid ticker symbol, purchase price, and share quantity. Type `done` when you have finished entering stocks.
+
+The program generates `portfolio_summary.csv` containing the calculated portfolio results.
 
 ## Project Files
-- `hangman.py` — Main Python program containing the game logic.
-- `words.txt` — English word list used to select the secret word.
-- `README.md` — Project documentation.
 
-## How to Run
-1. Install Python 3.
-2. Download or clone this repository.
-3. Ensure `hangman.py` and `words.txt` are in the same folder.
-4. Open a terminal in that folder.
-5. Run the following command:
-
-python hangman.py
-
-
-## How to Play
-1. Run the program.
-2. Read the underscores displayed for the hidden word.
-3. Enter one alphabet letter at a time.
-4. Correct guesses reveal letters in the word.
-5. Incorrect guesses reduce the remaining attempts and update the hangman drawing.
-6. Guess the complete word before your attempts run out to win.
+- `hangman.py` — Hangman game source code
+- `words.txt` — Words used by the Hangman game
+- `portfolio.py` — Stock portfolio tracker source code
+- `constituents.csv` — Stock symbols used for validation
+- `portfolio_summary.csv` — Generated portfolio report
